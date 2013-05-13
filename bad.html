@@ -1,34 +1,18 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>Page Title</title>
 		
 		<!-- Document metadata -->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="keywords" content="basics,example,html">
-		<meta name="description" content="An example of some basic HTML markup.">
-		<meta name="author" content="Simon Elvery">
-		
-		<!-- Including favicon -->
-		<link rel="shortcut icon" href="_/img/favicon.ico">
-		
-		<!-- Including stylesheets -->
-		<link href="style.css" rel="stylesheet" type="text/css" media="all">
-		
-		<!-- Conditional comments -->
-		<!--[if lt IE 9]>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.min.js"></script>
-		<![endif]-->
+		<meta name="keywords" contenet="basics,example,html">
 		
 	</head>
 	<body>
-		<!-- Headings -->
+		
+		<!-- Headings ->
 		<h1>Level 1 Heading</h1>
 		<h2>Level 2 Heading</h2>
 		<h3>Level 3 Heading</h3>
-		<h4>Level 4 Heading</h4>
-		<h5>Level 5 Heading</h5>
-		<h6>Level 6 Heading</h6>
 		
 		<!-- Basic typography -->
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend aliquam imperdiet. Curabitur rhoncus 
@@ -37,19 +21,23 @@
 			aliquam egestas diam. Fusce arcu erat, vestibulum et tincidunt eu, sodales quis orci.</p>
 		
 		<p>Text can have <em>emphasis</em> or be <strong>strong</strong>. Default styling for these elements is italics
-			and bold respectively.</p>
+			and bold respectively. These tags can also be combined to make text <strong><em>strong and 
+			emphasised</strong></em></p>
 		
-		<p>It's possible to put a line<br>break into a block of text.</p>
+		<P>It's possible to put a line<br>break into a block of text.</P>
 		
 		<!-- Links -->
 		<p>Text (along with many other types of content) can be linked to <a href="#named-element">other parts of the 
 			document</a> or	<a href="http://designcollege.com.au" title="Design College Australia">other sites</a> 
 			entirely.</p>
 		
-		<!-- Lists -->
+		<!- Lists -->
 		<ul>
 			<li>List item 1</li>
-			<li>List item 2</li>
+			<li>
+				List item 2
+				<ul><li>Sub-list 1</li></ul>
+			</li>
 			<li>List item 3</li>
 			<li>List item 4</li>
 		</ul>
@@ -57,29 +45,34 @@
 		<ol>
 			<li>List item 1</li>
 			<li>List item 2</li>
-			<li>List item 3</li>
+			<li>
+				List item 3
+				<li>Sub-list 2</li>
+			</li>
 			<li>List item 4</li>
 		</ol>
 		
 		<!-- Images -->
+		<img src="http://placehold.it/30x30" alt="A 30px by 30px placeholder image">
 		<img src="http://placehold.it/300x300" alt="A 300px by 300px placeholder image">
+		<img src="http://placehold.it/600x600">
 		
 		<!-- quotes -->
 		<blockquote cite="http://developer.mozilla.org">
-			<p>The HTML <code>&lt;blockquote&gt;</code> element (or HTML Block Quotation Element) indicates that the 
-				enclosed text is an extended quotation. Usually, this is rendered visually by indentation.</p>
+			<p>The HTML <code style="color:red;">&lt;blockquote&gt;</code> element (or HTML Block Quotation Element) indicates that the 
+				enclosed text is an extended quotation. Usually, this is rendered visually by indentation.
 			<cite>This is a quotation taken from the Mozilla Developer Center.</cite>
 		</blockquote>
 		
 		<!-- Horizontal rule -->
 		<hr>
 		
-		<!-- Structural block level elements -->
-		<div>
-			<!-- HTML entities -->
-			<p>A <code>&lt;div&gt;</code> element is a generic container element used to group elements. It is typically
-			used as a hook to add style or layout using CSS. It can contain any type of content.</p>
-		</div>
+	<!-- Structural block level elements -->
+	<div>
+		<!-- HTML entities -->
+		<p>A <code>&lt;div&gt;</code> element is a generic container element used to group elements. It is typically
+		used as a hook to add style or layout using CSS. It can contain any type of content.</p>
+	</div>
 		
 		<!-- A basic table structure -->
 		<table>
@@ -133,8 +126,4 @@
 			</tbody>
 		</table>
 		
-		<!-- Including javasccript -->
-		<script src="javascript.js"></script>
-		
 	</body>
-</html>

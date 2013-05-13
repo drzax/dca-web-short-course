@@ -118,3 +118,14 @@ body {
 .reveal li {
 	margin-bottom: .8em;
 }
+
+.reveal pre {
+	width: auto;
+}
+
+.reveal pre code {
+	font-size: 1.7em;
+	line-height: 1.3em;
+	padding: 0.5em;
+	
+}

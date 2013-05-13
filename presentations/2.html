@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Week 1 - DCA Web Short Course</title>
+		<title>Week 2 - DCA Web Short Course</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -39,86 +39,125 @@
 
 				<section>
 					<h1>Web Short Course</h1>
-					<h3>Week one</h3>
+					<h3>Week two</h3>
 					<p>
-						<small>Presenter <a href="http://hakim.se">Simon Elvery</a> / <a href="http://twitter.com/drzax">@drzax</a></small>
+						<small>Presenter <a href="http://hakim.se">Simon Elvery</a> / <a href="http://elvery.net">elvery.net</a></small>
 					</p>
 				</section>
 				
 				<section>
+					<h2>Hosting</h2>
+					<h2>HTML basics</h2>
+				</section>
+				
+				<section>
+					<h1>Last week</h1>
+					<ul>
+						<li>Basic web terminology</li>
+						<li>Software</li>
+						<li>Project brief</li>
+						<li>Image asset production</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Resources</h1>
+					<ul>
+						<li><strong>Dropbox:</strong> tr.im/42jjt</li>
+						<li><strong>Links:</strong> bookmarks.url file</li>
+					</ul>
+				</section>
+				
+				<section>
 					<section>
-						<h1>So...what do <br>you do?</h1>
-						<br>
-						<p>(Don't worry, I'll go first)</p>
+						<img src="img/cloud.png" alt="The Cloud">
+					</section>
+					<section>
+						<img src="img/in-cloud.png" alt="Inside The Cloud">
+					</section>
+					<section>
+						<h2>Domain Name System</h2>
+						<h3><code>designcollege.com.au</code> → <code>64.34.122.87</code></h3>
+					</section>
+					<section>
+						<img src="img/in-cloud.png" alt="Inside The Cloud">
+					</section>
+					<section>
+						<h2>Hosting considerations</h2>
+						<ul>
+							<li>Required server-side technologies</li>
+							<li>Likely traffic levels</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Hosting case study</h2>
+						<p><a href="http://dreamhost.com/">dreamhost.com</a></p>
 					</section>
 				</section>
 				
 				<section>
-					<h2>Day job</h2>
-					<iframe src="http://player.vimeo.com/video/63531586?title=0&amp;byline=0&amp;portrait=0" width="800" height="600" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-				</section>
-
-				<section>
 					<section>
-						<h2>Course structure &amp; objectives</h2>
-						<ol>
-							<li>The (old) static web</li>
-							<li>The dynamic web</li>
-						</ol>
-					</section>
-					<section>
-						<h2>Classes 1 - 4: <em>The Static Web</em></h2>
-						<ul>
-							<li>
-								<p>Build the foundations first</p>
-								<p><em>An understanding of the core front-end technologies and how they interact</em></p>
-							</li>
-							<li class="fragment">
-								<p>Understanding the web as a medium for design</p>
-								<p><em>How is the web different to print?</em></p>
-							</li>
-							<li class="fragment">
-								<p>Tools & Techniques</p>
-								<p><em>Know what tools you need and how to use them</em></p>
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Classes 5 - 8: <em>Dynamic sites</em></h2>
-						<ul>
-							<li>
-								<p>What is a Content Management System?</p>
-								<p><em>Understand how CMS driven sites differ from static sites</em></p>
-							</li>
-							<li class="fragment">
-								<p>CMS options</p>
-								<p><em>How to choose a suitable CMS</em></p>
-							</li>
-							<li class="fragment">
-								<p>Using &amp; developing with WordPress</p>
-							</li>
-						</ul>
+						<img src="img/cyberduck.png" alt="Cyberduck">
+						<h2>Cyberduck - an FTP client</h2>
 					</section>
 				</section>
+				
 				<section>
-					<img src="img/finder.png">
-					<img src="img/compass.icns">
-				</section>
-				<section>
-					<h1>tr.im/42jjt</h1>
-				</section>
-				<section>
-					<section>
-						<h1><em>Jargon!</em></h1>
-					</section>
 					<section>
 						<h1>HTML</h1>
-						<h1>CSS</h1>
-						<h1>Javascript</h1>
 					</section>
 					<section>
-						<h2 style="line-height: 1.5em;">front-end, back-end, server, hyperlink, markup, meta-data, nesting, open source, semantic markup, specification, tag, URL, web page, web standards</h2>
+						<img src="img/html-tag.png" alt="HTML tag structure">
 					</section>
+					<section>
+						<h2>Nesting tags</h2>
+						<pre><code class="html" data-trim contenteditable>
+&lt;p&gt;Unless someone like you cares a whole awful lot, 
+  Nothing is going to get better. &lt;em&gt;It's not&lt;/em&gt;.&lt;/p&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h2>Nesting tags</h2>
+						<pre><code class="html" data-trim contenteditable>
+&lt;p&gt;Unless someone like you cares a whole awful lot, 
+  Nothing is going to get better. 
+  &lt;em&gt;It's &lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+						</code></pre>
+						<small><a href="http://codepen.io/drzax/pen/rkdiJ">pen</a></small>
+					</section>
+					
+					<section>
+						<h1>Bare bones</h1>
+						<pre><code class="html" data-trim contenteditable>
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bare bones&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;html&gt;
+						</code></pre>
+					</section>
+					
+					<section>
+						<h1>Key tags</h1>
+						<ul>
+							<li><code>div</code> &mdash; A generic container element</li>
+							<li><code>h1</code> &mdash; Level 1 heading</li>
+							<li><code>a</code> &mdash; A hyperlink (anchor)</li>
+							<li><code>p</code> &mdash; Paragraph</li>
+							<li><code>ul</code> — Unordered list</li>
+							<li><code>ol</code> — Ordered list</li>
+							<li><code>li</code> — List item</li>
+							<li><code>img</code> — Image</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element?redirectlocale=en-US&redirectslug=HTML%2FElement">HTML Element Reference</a></h2>
+					</section>
+					
 				</section>
 			</div>
 
