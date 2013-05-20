@@ -20,17 +20,19 @@ body {
 	position: relative;
 }
 
-#main {
-	width: 725px;
+
+header>img {
 	float: right;
 }
 
-header {
+header>nav {
 	float: left;
+	width: 275px;
 }
 
-footer {
+#main {
 	clear: both;
+	margin-left: 275px;
 }
 
 /**
