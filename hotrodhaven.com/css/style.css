@@ -1,17 +1,41 @@
-/*
-
-The main stylesheet.
-
-*/
-
 body {
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	color: #000;
+	
 	background: #e6e6e6;
 	padding: 0;
 	margin: 0;
 }
 
-#top {
-	background: #fff;
+h1, h2, h3, h4 {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	margin-bottom: 0;
+}
+
+h1 {
+	font-size: 36px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 28px;
+	font-style: italic;
+	font-weight: normal;
+}
+
+p {
+	margin-top: 0;
+}
+
+a,
+a:link,
+a:visited {
+	color: #000;
+}
+
+a:hover {
+	color: #134674;
 }
 
 .wrap {
@@ -20,33 +44,189 @@ body {
 	position: relative;
 }
 
+#main {
+	margin-left: 275px;
+}
 
-header>img {
+#top {
+	background: #fff;
+	padding-top: 10px;
+}
+
+#banner {
 	float: right;
 }
 
 header>nav {
-	float: left;
-	width: 275px;
+	position: fixed;
+	width: 235px;
+	border-right: 1px solid #000;
+	text-align: center;
+	padding-right: 20px;
+	text-transform: uppercase;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
 }
 
-#main {
+nav ul {
+	margin: 10px 0 0;
+	padding: 0;
+	border-top: 1px solid #000;
+}
+
+nav ul li {
+	list-style: none;
+	border-bottom: 1px solid #000;
+}
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited {
+	display: block;
+	padding: 9px 0;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background: #000;
+	color: #fff;
+}
+
+section {
 	clear: both;
-	margin-left: 275px;
+	margin-top: 30px;
+}
+
+article {
+	border-bottom: 1px solid #000;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+}
+
+article h2 {
+	font-size: 50px;
+	font-style: normal;
+	text-transform: uppercase;
+	margin-top: 0;
+}
+
+article h3 {
+	font-size: 28px;
+	font-style: italic;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+article header {
+	border-bottom: 1px solid #000;
+	margin-bottom: 20px;
+}
+
+article header h3 {
+	margin-top: 0;
+}
+
+.meta {
+	float: left;
+	margin: 0;
+	width: 164px;
+}
+
+.meta dt,
+.meta p span {
+	display: block;
+	text-transform: uppercase;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	color: #4d4d4d;
+}
+
+.meta dd {
+	margin-left: 0;
+	margin-bottom: 1em;
+}
+
+div.content {
+	float: right;
+	margin-top: 0;
+	padding-left: 20px;
+	width: 520px;
+	border-left: 1px solid #000;
+}
+
+div.content p:last-child {
+	margin-bottom: 0;
+}
+
+#merchandise img {
+	float: right;
+}
+
+#contact > a {
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+
+#contact > a img {
+	display: block;
+}
+
+#contact strong {
+	font-weight: normal;
+}
+
+.thumbs {
+	clear: both;
+}
+
+.thumbs img {
+	display: block;
+	float: left;
+	margin: 11px;
+}
+
+body>footer {
+	text-align: center;
+	padding: 30px 0;
+}
+
+body>footer p {
+	margin: 0;
+	font-size: 14px;
+}
+
+#tagline {
+	font-family: 'Faster One', cursive;
+	font-size: 34px;
+	margin-bottom: 30px;
+}
+
+#tagline span {
+	display: block;
+	font-size: 22px;
 }
 
 /**
  * Clearfix.
- * See: http://nicolasgallagher.com/micro-clearfix-hack/
+ * See: http://nicolasgallagher.com/micro-clearfix-hack/ for more information
  */
+ section:before,
+ section:after,
+ .thumbs:before,
+ .thumbs:after,
 .clearfix:before,
 .clearfix:after {
 	content: " ";
 	display: table; 
 }
+section:after,
+.thumbs:after,
 .clearfix:after {
 	clear: both;
 }
+section
+.thumbs,
 .clearfix {
 	*zoom: 1;
 }

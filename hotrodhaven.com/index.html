@@ -13,17 +13,17 @@
 		
 		<!-- Including stylesheets -->
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+		<link href='http://fonts.googleapis.com/css?family=Faster+One' rel='stylesheet' type='text/css'>
 		
 		<!-- Conditional comments -->
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.min.js"></script>
 		<![endif]-->
-		
 	</head>
 	<body>
 		<div id="top">
 			<div class="wrap clearfix">
-				<header>
+				<header class="clearfix">
 					<nav>
 						<a href="#top" title="Home"><img src="images/logo.png" alt="Hot Rod Haven" width="188"></a>
 						<ul>
@@ -33,14 +33,14 @@
 							<li><a href="#gallery">Gallery</a></li>
 						</ul>
 					</nav>
-					<img src="images/banner.jpg" alt="Hot rod on the beach banner">
+					<img id="banner" src="images/banner.jpg" alt="Hot rod on the beach banner">
 				</header>
 				<div id="main">
 					<section id="latest">
 						<h1>Latest work</h1>
 						<img src="images/cadi-large.jpg" alt="Danny Zuko's Cadilac">
 						<h2>Custom Cadi’</h2>
-						<dl>
+						<dl class="meta">
 							<dt>Owner</dt>
 							<dd>Danny Zuko</dd>
 
@@ -50,7 +50,7 @@
 							<dt>Year</dt>
 							<dd>1956</dd>
 						</dl>
-						<div>
+						<div class="content">
 							<p>It’s been a rare pleasure working on Danny Zuko’s new ride. This 1956 Cadillac is a real gem that came to our workshop already in great condition. </p>
 							<p>Read more about this beautiful custom Cadillac and see more beautiful shots in our Gallery section.</p>
 						</div>
@@ -72,19 +72,23 @@
 						<p>Cruise in to the workshop sometime soon. We love talkin’ anything to do with hot rods.</p>
 						<p>200 Barry Pde<br>Fortitude Valley, Queensland<br>Australia</p>
 						<p><strong>Phone:</strong> (07) 3257 3499<br><strong>Email:</strong> <a href="mailto:hello@hotrodhaven.com" title="Email us">hello@hotrodhaven.com.au</a></p>
+						<p><a href="http://twitter.com" title="Twitter!"><img src="images/twitter.png" alt="Twitter icon"></a> 
+							<a href="http://facebook.com" title="Facebook!"><img src="images/facebook.png" alt="Facebook icon"></a></p>
 					</section>
 
 					<section id="gallery">
 						<h1>Gallery</h1>
 						<article>
-							<h2>Necessary Evil:</h2>
-							<img src="images/cadi-large.jpg" alt="Danny Zuko's Cadilac">
-							<h3>Cruisin’ In A Mild Custom Cadi’</h3>
+							<header>
+								<img src="images/cadi-large.jpg" alt="Danny Zuko's Cadilac">
+								<h2>Necessary Evil:</h2>
+								<h3>Cruisin’ In A Mild Custom Cadi’</h3>
+							</header>
 							<div class="meta">
 								<p><span>Featured by</span> Glen Stewart Snr., Josh Bell and Jason Dreamer</p>
 								<p><span>Posted</span> 25 April 2012</p>
 							</div>
-							<div>
+							<div class="content">
 								<p>It’s not often I get nervous when I’m thrown the keys to someone else’s car, but then again the ’56 Cadillac I just buckled up in certainly isn’t your average ride – or at least the average when it comes to cars that I’m accustomed to driving. Piloting, or in this case ‘captaining’, a left-hand-drive car on the wrong side of the road it was designed to be driven on wasn’t the issue here. It was the shear size of the beast coupled with blunt brakes and steering best described as ‘vague’ that had me a little worried for its pristine panels and sparking chrome work. I soldiered on, pumping the gas pedal as I twisted on the key, awakening 400 cubic inches of Chevrolet V8 under the hood. It sounded grumpy. I liked it.</p>
 							</div>
 
@@ -96,17 +100,21 @@
 							</div>
 						</article>
 						<article>
-							<h2>The Kid Rocker:</h2>
-							<img src="images/kidrocker-large.jpg" alt="Kid rocker hero image">
-							<h3>Matsui’s ‘29 Ford Model A Hot Rod</h3>
+							<header>
+								<img src="images/kidrocker-large.jpg" alt="Kid rocker hero image">
+								<h2>The Kid Rocker:</h2>
+								<h3>Matsui’s ‘29 Ford Model A Hot Rod</h3>
+							</header>
 
 							<div class="meta">
 								<p><span>Featured by</span> Micheal Fernan, Sarah Vekowski, Julian Dorison</p>
 								<p><span>Posted</span> 18 April 2012</p>
 							</div>
-							<div>
+							
+							<div class="content">
 								<p>So there I was, an Italian photojournalist in Yokohama’s Chinatown district, shooting an American hot rod, built and owned by a Japanese guy. I just had to smile. True passion obviously has no borders, nor do actual styles. And seeing how well Japan manages to integrate tradition, modernity and western culture – the choice of location for this rather special car feature really couldn’t have been more perfect.,</p>
 							</div>
+							
 							<div class="thumbs">
 								<img src="images/thumbs/kidrocker-1.jpg" alt="Kid rocker hot rod from the passenger seat">
 								<img src="images/thumbs/kidrocker-2.jpg" alt="Kid rocker hot rod under a bridge">
@@ -122,7 +130,7 @@
 		
 		<footer>
 			<div class="wrap">
-				<p>Building the best custom hot rods in Brisbane <span>since 1955</span></p>
+				<p id="tagline">Building the best custom hot rods in Brisbane <span>since 1955</span></p>
 				<p>&copy; Copyright 2013</p>
 				<p><a href="terms.html" title="View our Terms of Use">Terms of Use</a> | <a href="privacy.html" title="View our Privacy Policy">Privacy Policy</a>
 			</div>
