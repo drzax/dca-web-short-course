@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Week 1 - DCA Web Short Course</title>
+		<title>Week 3 - DCA Web Short Course</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -43,9 +43,90 @@
 				</section>
 				
 				<section>
-					<h1></h1>
+					<section>
+						<h1>Creating markup</h1>
+						<h2>Goals:</h2>
+						<ul>
+							<li>Provide hooks required for styling</li>
+							<li>Semantic markup</li>
+						</ul>
+					</section>
+					<section>
+						<img src="img/html-tag.png" alt="HTML tag structure">
+					</section>
+					<section>
+						<h1>Links</h1>
+						<ul>
+							<li>Absolute</li>
+							<li>Relative</li>
+							<li>Anchor (or in-page)</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Absolute</h3>
+						<pre><code>&lt;a href="http://example.com/page.html">Other site&lt;/a></code></pre>
+						<h3>Relative</h3>
+						<pre><code>&lt;a href="other-page.html">Other Page&lt;/a></code></pre>
+						<h3>Anchor</h3>
+						<pre><code>&lt;a href="#page-section">My Page&lt;/a></code></pre>
+					</section>
+					<section>
+						<h1>The ID attribute</h1>
+						<pre><code>&lt;div id="page-section">Section content&lt;/div></code></pre>
+					</section>
+					<section>
+						<h2>HTML Element Reference</h2>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h1>CSS</h1>
+						<h2>Cascading Style Sheets</h2>
+					</section>
+					<section>
+						<h2>Basic syntax</h2>
+						<code>selector{property:value}</code>
+					</section>
+					<section>
+						<h2>Properties</h2>
+						<p>Can be:</p>
+						<ul>
+							<li>HTML element (tag) name</li>
+							<li><code>class</code> attribute</li>
+							<li><code>ID</code> attribute</li>
+						</ul>
+					</section>
+					<section>
+						<pre><code>&lt;p id="paragraph-1" class="intro">
+</code></pre>
+					</section>
+					
+					<section>
+						<pre><code>p {
+  font-color: #FF0000;
+}
+
+#paragraph-1 {
+  font-color:: #FF0000;
+}
+
+.intro {
+  font-color: #FF0000;
+}
+</code></pre>
+					</section>
+					<section>
+						<pre><code>p {
+  font-color: #FF0000;
+  font-size: 20px;
+}
+
+</code></pre>
+					</section>
 					
 				</section>
+				
 			</div>
 
 		</div>
