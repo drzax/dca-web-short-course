@@ -41,10 +41,180 @@
 					<h1>Web Short Course</h1>
 					<h3>Week four</h3>
 				</section>
-				
 				<section>
+					<section>
+						<h1>CSS</h1>
+						<h2>Cascading Style Sheets</h2>
+					</section>
+					<section>
+						<h2>Basic syntax</h2>
+						<code>selector{property:value}</code>
+					</section>
+					<section>
+						<h2>Properties</h2>
+						<p>Can be:</p>
+						<ul>
+							<li>HTML element (tag) name</li>
+							<li><code>class</code> attribute</li>
+							<li><code>ID</code> attribute</li>
+						</ul>
+					</section>
+					<section>
+						<pre><code>&lt;p id="paragraph-1" class="intro">
+</code></pre>
+					</section>
 					
+					<section>
+						<pre><code>p {
+  color: #FF0000;
+}
+
+#paragraph-1 {
+  color: #FF0000;
+}
+
+.intro {
+  color: #FF0000;
+}
+</code></pre>
+					</section>
+					
+					<section>
+						<pre><code>p {
+  color: #FF0000;
+  font-size: 20px;
+}
+
+</code></pre>
+					</section>
 				</section>
+				<section>
+					<section>
+						<h2>Stylesheet Specificity</h2>
+						<h2>Inheritance</h2>
+						<h2>Selector Specificity &amp; Order</h2>
+					</section>
+					<section>
+						<h2>Inheritance</h2>
+						<pre><code>&lt;p>Cascading &lt;span>Style&lt;/span> Sheets&lt;/p></code></pre>
+						<pre><code>p {
+  color: blue;
+}
+</code></pre>
+					</section>
+					<section>
+						<h2>Inheritance</h2>
+						<pre><code>&lt;div>
+  &lt;p>Cascading Style Sheets&lt;/p>
+&lt;/div>
+&lt;p>Cascading Style Sheets&lt;/p></code></pre>
+						<pre><code>div p {
+  color: blue;
+}
+</code></pre>
+					</section>
+					<section>
+						<h2>Selector Order</h2>
+						<pre><code>&lt;p>Cascading &lt;span>Style&lt;/span> Sheets&lt;/p></code></pre>
+						<pre><code>span {
+  color: blue;
+}
+
+span {
+  color: red;
+}
+</code></pre>
+					</section>
+					<section>
+						<h2>Selector Specificity</h2>
+						<pre><code>&lt;p>Cascading &lt;span>Style&lt;/span> Sheets&lt;/p></code></pre>
+						<pre><code>p span {
+  color: blue;
+}
+
+span {
+  color: red;
+}
+</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>CSS Properties</h1>
+						<h3><a href="http://cssbasics.com">cssbasics.com</a></h3>
+						<h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS Reference</a></h3>
+					</section>
+					<section>
+						<h2>Font Stacks</h2>
+						<p><a href="http://cssfontstack.com/">cssfontstack.com</a></p>
+						<h3>Serif</h3>
+						<code>font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;</code>
+						<h3>Sans</h3>
+						<code>font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;</code>
+					</section>
+					<section>
+						<h2>Web Fonts</h2>
+						<ul>
+							<li><a href="http://fontdeck.com">Fontdeck</a></li>
+							<li><a href="http://typekit.com">Typekit</a></li>
+							<li><a href="http://google.com/webfonts" target="_blank">Google Webfonts</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Font Properties</h2>
+						<pre><code>color: #000000;
+
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+font-size: 10px;
+font-style: italic;
+font-weight: bold;
+
+text-decoration: underline;
+text-transform: uppercase;
+text-align: center;
+</code></pre>
+					</section>
+					<section>
+						<h2>Font size units</h2>
+						<p>Units can be either <em>relative</em> or <em>absolute</em>.</p>
+						
+						<pre><code>body {
+  /* Absolute units */
+  font-size: 16px;
+
+  /* Relative units */
+  font-size: 1em;
+  font-size: 100%;
+}
+</code></pre>
+					</section>
+					<section>
+						
+						<pre><code>&lt;p>Cascading &lt;span>Style&lt;/span> Sheets&lt;/p></code></pre>
+						<pre><code>p {
+  font-size: 16px;
+}
+
+span {
+  font-size: 1.5em;
+}
+</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Element Positioning Properties</h2>
+						<h3>The Box Model</h3>
+					</section>
+					<section>
+						<pre><code>margin: 20px;
+padding: 20px;
+position: fixed;
+float: left;
+</code></pre>
+					</section>
+				</section>
+				
 			</div>
 
 		</div>
