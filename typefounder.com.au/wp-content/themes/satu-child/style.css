@@ -1,0 +1,23 @@
+/*
+Theme Name:     Satu Child
+Author:         Simon
+Template:       satu                             
+Version:        0.1 
+*/
+
+.container {
+	max-width: 1200px;
+	_width: 1200px;
+}
+
+#menu-main-menu {
+	margin: 0 2em 2em;
+	padding: 0;
+	text-align: center;
+}
+
+#menu-main-menu li {
+	list-style: none;
+	display: inline;
+	padding: 1em;
+}
