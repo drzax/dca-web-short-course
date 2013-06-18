@@ -159,7 +159,7 @@ Second we need to add the menu we created to our `header.php` template. To do th
 	
 Upload the new `functions.php` file and our modified `header.php` template and we're ready to use the new menu area in our theme.
 
-### Part four
+### Part four 
 
 We can go back to the WordPress admin area and add the menu we created in step exercise three into our brand new navigation area. Once you've done this and re-loaded the page in a browser, you should see the new menu in the header of the site. Unfortunately, it needs a little styling, so you will need to use your HTML and CSS skills to add some appropriate styles to make it look a bit nicer.
 
