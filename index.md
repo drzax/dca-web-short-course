@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Week 7 - Child Themes
+title: "Week 7: Child Themes"
 ---
 
 **Goal:** to modify the [Satu](http://wordpress.org/themes/satu) theme by creating a [child WordPress theme](http://codex.wordpress.org/Child_Themes).
