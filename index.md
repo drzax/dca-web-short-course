@@ -12,6 +12,7 @@ Try to keep your CSS organised and tidy. Use the `style.css` file in the Satu th
 
 #### Refer to documentation
 Some key resources which will help with today's exercises include:
+
 - [CSS Basics](http://www.cssbasics.com/)
 - [The WordPress Codex](http://codex.wordpress.org/)
 
@@ -23,7 +24,7 @@ To achieve this you will need to override the CSS in the parent theme which sets
 
 First find out what CSS selector is used to control width (hint: it's a [class selector](http://www.cssbasics.com/css-classes/)). You can do this by examining the site's HTML (often referred to as the DOM) and CSS using the [Google Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/docs/elements). 
 
-Once you've found the CSS selector and property which sets the maximum-width of the page, you can add CSS to your child theme's   `style.css` to override the parent theme style.
+Once you've found the CSS selector and property which sets the maximum-width of the page, you can add CSS to your child theme's `style.css` to override the parent theme style.
 
 Finally, save and upload (or PUT) your CSS using FTP to check it's working as expected in the browser.
 
