@@ -68,6 +68,38 @@ Once you have found and installed 'Contact Form 7', you should see an option to 
 To add a contact form to a page, you will need to copy the appropriate shortcode and paste it into your page content. The shortcode will look something like `[contact-form-7 id="53" title="Contact form 1"]`. Once you've pasted the code into a new 'Contact Us' page you can save and publish the page, then test the contact form. Now that you've created a contact page, you can go back to the menu created in exercise three and add your new page so users can find it easily.
 
 ## Exercise five
-Override the parent theme's `header.php` template and 
-add a [navigation menu](http://codex.wordpress.org/Navigation_Menus) to the theme, above the breadcrumb menu.
+Override the parent theme's `header.php` template and add a [navigation menu](http://codex.wordpress.org/Navigation_Menus) to the theme, above the breadcrumb menu.
+
+### Method
+Remember from last week, that any [template files](http://codex.wordpress.org/Templates) we add to our child theme will override templates of the same name in the parent theme. In order to add new HTML (a menu) to the header of our site, we will need to override the template file which is used to generate the header which is `header.php`. To get started, copy the `header.php` file from the `satu` theme directory into your `satu-child` theme.
+
+#### Part one
+To test that our new template file is successfully overriding the parent theme, we will make a change to the HTML, upload (PUT) the file to the server then reload our page and check the HTML to verify that the change is there. Find line 36, which should be:
+
+```
+<body class="<?php hybrid_body_class(); ?>">
+```
+
+Change it to:
+
+```
+<body class="<?php hybrid_body_class(); ?> custom">
+```
+
+This will add an additional class to the `body` tag. Save the file and upload it to your server. Open the homepage of your site in the browser. Now when you inspect the site's HTML using Google Chrome's Developer Tools, you should see that the `class` attribute on the `body` tag now contains the `custom` class which you've just added. For example:
+
+```
+<!-- before -->
+<body class="wordpress ltr en_US child-theme y2013 m06 d18 h04 tuesday logged-in admin-bar home blog">
+
+<!-- after -->
+<body class="wordpress ltr en_US child-theme y2013 m06 d18 h04 tuesday logged-in admin-bar home blog custom">
+```
+
+If you like, have a play around inserting and removing other bits of content into the `header.php` template to get a feel for how this works before moving on to the next part.
+
+#### Part two
+Now that we have verified that our new `header.php` template file is being used, we need to find where in the file to add our new menu. Remember we want to add the menu just above the current breadcrumbs (the bit that says *You are here: Home*). By examining the HTML in Developer Tools and comparing it to the HTML we can see in the `header.php` file we can discover where the new HTML needs to be inserted.
+
+
 
