@@ -7,10 +7,10 @@ title: "Week 7: Child Themes"
 
 ## Tips
 
-## Stay organised
+### Stay organised
 Try to keep your CSS organised and tidy. Use the `style.css` file in the Satu theme as an example. It's very well organised with a [comment] at the top of the file with a table of contents and a comment at the beginning of each section.
 
-## Refer to documentation
+### Refer to documentation
 Some key resources which will help with today's exercises include:
 - [CSS Basics](http://www.cssbasics.com/)
 - [The WordPress Codex](http://codex.wordpress.org/)
@@ -71,7 +71,7 @@ Override the parent theme's `header.php` template and add a [navigation menu](ht
 ## Method
 Remember from last week, that any [template files](http://codex.wordpress.org/Templates) we add to our child theme will override templates of the same name in the parent theme. In order to add new HTML (a menu) to the header of our site, we will need to override the template file which is used to generate the header which is `header.php`. To get started, copy the `header.php` file from the `satu` theme directory into your `satu-child` theme.
 
-## Part one
+### Part one
 To test that our new template file is successfully overriding the parent theme, we will make a change to the HTML, upload (PUT) the file to the server then reload our page and check the HTML to verify that the change is there. Find line 36, which should be:
 
 	<body class="<?php hybrid_body_class(); ?>">
@@ -90,7 +90,7 @@ This will add an additional class to the `body` tag. Save the file and upload it
 
 If you like, have a play around inserting and removing other bits of content into the `header.php` template to get a feel for how this works before moving on to the next part.
 
-## Part two
+### Part two
 Now that we have verified that our new `header.php` template file is being used, we need to find where in the file to add our new menu. Remember we want to add the menu just above the current breadcrumbs (the bit that says *You are here: Home*). By examining the HTML in Developer Tools and comparing it to the HTML we can see in the `header.php` file we can discover where the new HTML needs to be inserted.
 
 Examining the `header.php` file in Dreamweaver, we can see that there is a `<header>` tag which is opened on line 36:
@@ -138,7 +138,7 @@ To test this and make sure we have the right place, add some HTML where we think
 		do_action( 'satu_header_after' ); 
 	?>
 	
-## Part three
+### Part three
 Now we have located where in the `header.php` file we need to add our new menu, we need to read the WordPress documentation on [Navigation Menus](http://codex.wordpress.org/Navigation_Menus) to find out how to add a menu area to a template file.
 
 The first step is to create a `functions.php` file for our child theme. This is a PHP file which will contain one function which will register our new menu with WordPress and a call to the `add_action` WordPress function (see the [WordPress function reference](http://codex.wordpress.org/Function_Reference/add_action)). The complete file should look like this:
@@ -159,7 +159,7 @@ Second we need to add the menu we created to our `header.php` template. To do th
 	
 Upload the new `functions.php` file and our modified `header.php` template and we're ready to use the new menu area in our theme.
 
-## Part four
+### Part four
 
 We can go back to the WordPress admin area and add the menu we created in step exercise three into our brand new navigation area. Once you've done this and re-loaded the page in a browser, you should see the new menu in the header of the site. Unfortunately, it needs a little styling, so you will need to use your HTML and CSS skills to add some appropriate styles to make it look a bit nicer.
 
