@@ -177,6 +177,7 @@ code {
   background-color: #f2f2f2;
   border: solid 1px #ddd;
   padding: 0 3px;
+  white-space: nowrap;
 }
 
 pre {
