@@ -47,7 +47,7 @@ First you will need to create a menu by going to *Appearance->Menus* in the admi
 
 The areas down the left of the screen which were previously disabled should now be available. From here you can add custom links, pages and blog category listings to the menu. Add the About Us page you created last week into the menu by selecting the checkbox nest to the page title and clicking 'Add to Menu' and then 'Save Menu'(if you didn't get to that last week, you'll need to create a new About Us page first by going to *Pages->Add New* in the main menu). Note that the 'Theme Locations' box says:
 
-	The current theme does not natively support menus, but you can use the “Custom Menu” widget to add any menus you create here to the theme’s sidebar.
+>The current theme does not natively support menus, but you can use the “Custom Menu” widget to add any menus you create here to the theme’s sidebar.
 
 In exercise five we will add a menu support to our child theme, but for now we will need to use the 'Custom Menu' widget as suggested (the only problem is, it's called the 'Navigation Menu' widget). In the main admin menu choose *Appearance->Widgets*.
 
@@ -76,25 +76,19 @@ Remember from last week, that any [template files](http://codex.wordpress.org/Te
 #### Part one
 To test that our new template file is successfully overriding the parent theme, we will make a change to the HTML, upload (PUT) the file to the server then reload our page and check the HTML to verify that the change is there. Find line 36, which should be:
 
-```
-<body class="<?php hybrid_body_class(); ?>">
-```
+	<body class="<?php hybrid_body_class(); ?>">
 
 Change it to:
 
-```
-<body class="<?php hybrid_body_class(); ?> custom">
-```
+	<body class="<?php hybrid_body_class(); ?> custom">
 
 This will add an additional class to the `body` tag. Save the file and upload it to your server. Open the homepage of your site in the browser. Now when you inspect the site's HTML using Google Chrome's Developer Tools, you should see that the `class` attribute on the `body` tag now contains the `custom` class which you've just added. For example:
 
-```
-<!-- before -->
-<body class="wordpress ltr en_US child-theme y2013 m06 d18 h04 tuesday logged-in admin-bar home blog">
+	<!-- before -->
+	<body class="wordpress ltr en_US child-theme y2013 m06 d18 h04 tuesday logged-in admin-bar home blog">
 
-<!-- after -->
-<body class="wordpress ltr en_US child-theme y2013 m06 d18 h04 tuesday logged-in admin-bar home blog custom">
-```
+	<!-- after -->
+	<body class="wordpress ltr en_US child-theme y2013 m06 d18 h04 tuesday logged-in admin-bar home blog custom">
 
 If you like, have a play around inserting and removing other bits of content into the `header.php` template to get a feel for how this works before moving on to the next part.
 
