@@ -95,5 +95,73 @@ If you like, have a play around inserting and removing other bits of content int
 #### Part two
 Now that we have verified that our new `header.php` template file is being used, we need to find where in the file to add our new menu. Remember we want to add the menu just above the current breadcrumbs (the bit that says *You are here: Home*). By examining the HTML in Developer Tools and comparing it to the HTML we can see in the `header.php` file we can discover where the new HTML needs to be inserted.
 
+Examining the `header.php` file in Dreamweaver, we can see that there is a `<header>` tag which is opened on line 36:
 
+	<header id="masthead" class="site-header" role="banner">
+	
+And closes on line 74:
+
+	</header><!-- #masthead .site-header -->
+	
+Looking in Developer Tools we can see the closing `</header>` tag is followed by a `<div>` tag with the class attribute `class="after-header"` and then another `<div>` tag with the ID attribute `id="main"`. (There are also some HTML comments used by the author to identify the closing tags in the source code with thier ID and class attributes.)
+
+	<header id="masthead" class="site-header" role="banner">...</header>
+	<!-- #masthead .site-header -->
+	<div class="after-header">...</div>
+	<!-- .after-header -->
+	<div id="main" class="site-main">...</div>
+	<!-- #main -->
+
+Moving your mouse over the `<div class="after-header">` tag in Developer tools reveals that this element is the breadcrumbs that we want to insert our menu before. Moving back to Dreamweaver we can see from line 74:
+
+	</header><!-- #masthead .site-header -->
+
+	<?php 
+		// Action hook for placing content below the theme header
+		do_action( 'satu_header_after' ); 
+	?>
+	
+	<div id="main" class="site-main">
+
+From this we can deduce that even though the HTML which creates the breadcrumb element isn't in the `header.php` file, it must be added by the PHP code which is between the closing `</header>` tag and the opening `<div id="main" class="site-main">` tag, so we want to insert our new menu above that code.
+
+	<!-- Insert new menu here -->
+	
+	<?php 
+		// Action hook for placing content below the theme header
+		do_action( 'satu_header_after' ); 
+	?>
+	
+To test this and make sure we have the right place, add some HTML where we think the menu should to, upload `header.php` and refresh the site to see where the added HTML appears.
+
+	<p>This will be a new menu!</p>
+	<?php 
+		// Action hook for placing content below the theme header
+		do_action( 'satu_header_after' ); 
+	?>
+	
+#### Part three
+Now we have located where in the `header.php` file we need to add our new menu, we need to read the WordPress documentation on [Navigation Menus](http://codex.wordpress.org/Navigation_Menus) to find out how to add a menu area to a template file.
+
+The first step is to create a `functions.php` file for our child theme. This is a PHP file which will contain one function which will register our new menu with WordPress and a call to the `add_action` WordPress function (see the [WordPress function reference](http://codex.wordpress.org/Function_Reference/add_action)). The complete file should look like this:
+
+	<?php
+
+	// A function which registers a navigation menu with WordPress
+	function register_my_menu() {
+	  register_nav_menu('header-menu',__( 'Header Menu' ));
+	}
+
+	// Tell WordPress when to call this function
+	add_action( 'init', 'register_my_menu' );
+
+Second we need to add the menu we created to our `header.php` template. To do this, replace the test content we added previously (`<p>This will be a new menu!</p>`) with a call to the WordPress `wp_nav_menu` function as described in [the documentation](http://codex.wordpress.org/Navigation_Menus#Display_Menus_on_Theme).
+
+	<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+	
+Upload the new `functions.php` file and our modified `header.php` template and we're ready to use the new menu area in our theme.
+
+#### Part four
+
+We can go back to the WordPress admin area and add the menu we created in step exercise three into our brand new navigation area. Once you've done this and re-loaded the page in a browser, you should see the new menu in the header of the site. Unfortunately, it needs a little styling, so you will need to use your HTML and CSS skills to add some appropriate styles to make it look a bit nicer.
 
