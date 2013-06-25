@@ -33,7 +33,7 @@
 
 </head>
 
-<body class="<?php hybrid_body_class(); ?>">
+<body class="<?php hybrid_body_class(); ?> custom">
 
 <?php 
 	// Action hook for placing content before opening #page
@@ -73,7 +73,7 @@
 			
 		</header><!-- #masthead .site-header -->
 
-		<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'container' ) ); ?>
+		<?php // wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'container' ) ); ?>
 
 		<?php 
 			// Action hook for placing content below the theme header
