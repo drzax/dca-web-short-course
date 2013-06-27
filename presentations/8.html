@@ -41,20 +41,448 @@
 					<h3>Graduation Day!</h3>
 				</section>
 				<section>
+					<p>Front-end Technologies</p>
+					<h1 class="fragment">HTML</h1>
+					<h1 class="fragment">CSS</h1>
+					<h1 class="fragment" style="color:rgba(255,255,255,.2);">Javascript</h1>
+				</section>
+				
+				<section>
 					<section>
-						<h1>Week 1</h1>
+						<h1>HTML</h1>
+					</section>
+					
+					<section>
+						<p>Purpose of HTML is to provide:</p>
+						<h2 class="fragment">semantic meaning to content</h2>
+						<h2 class="fragment">hooks for styling (CSS)</h2>
+						<h2 class="fragment">navigational functionality</h2>
+					</section>
+					
+					<section>
+						<img src="img/html-tag.png" alt="HTML tag structure">
 					</section>
 					<section>
-						<p>Front-end Technologies</p>
-						<h1 class="fragment">HTML</h1>
-						<h1 class="fragment">CSS</h1>
-						<h1 class="fragment" style="color:rgba(255,255,255,.2);">Javascript</h1>
+						<h2>Nesting tags</h2>
+						<pre><code class="html" data-trim contenteditable>
+&lt;p&gt;Unless someone like you cares a whole awful lot, 
+  Nothing is going to get better. &lt;em&gt;It's not&lt;/em&gt;.&lt;/p&gt;
+						</code></pre>
 					</section>
 					<section>
-						
+						<h2>Nesting tags</h2>
+						<pre><code class="html" data-trim contenteditable>
+&lt;p&gt;Unless someone like you cares a whole awful lot, 
+  Nothing is going to get better. 
+  &lt;em&gt;It's &lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+						</code></pre>
+						<small><a href="http://codepen.io/drzax/pen/rkdiJ">pen</a></small>
+					</section>
+					<section>
+						<h1>Bare bones</h1>
+						<pre><code class="html" data-trim contenteditable>
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bare bones&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;html&gt;
+						</code></pre>
+					</section>
+					<section>
+						<img src="img/html-attributes.png" alt="HTML attributes structure">
+					</section>
+					<section>
+						<p>Link types:</p>
+						<h2>Absolute</h2>
+						<pre class="fragment"><code>&lt;a href="http://example.com/page.html">Other site&lt;/a></code></pre>
+						<h2>Relative</h2>
+						<pre class="fragment"><code>&lt;a href="other-page.html">Other page&lt;/a></code></pre>
+						<h2>Anchor (or in-page)</h2>
+						<pre class="fragment"><code>&lt;a href="#page-section">Section of this page&lt;/a></code></pre>
+					</section>
+					
+					<section>
+						<h1>HTML Resources</h1>
+					</section>
+					<section>
+						<img src="img/google.png">
+					</section>
+					<section>
+						<h2>MDN - Introduction to HTML</h2>
+						<img src="img/mdn-html.png">
+					</section>
+					<section>
+						<h2>MDN - HTML Elements Reference</h2>
+						<img src="img/mdn-html-elements.png">
+					</section>
+				</section>	
+				<section>
+					<section>
+						<h1>CSS</h1>
+						<h2>Cascading Style Sheets</h2>
+					</section>
+					<section>
+						<h2>Basic syntax</h2>
+						<pre><code>
+selector {
+  property: value;
+}
+</code></pre>
+					</section>
+					<section>
+						<p>Selectors can be:</p>
+						<h2 class="fragment">HTML element (tag) name</h2>
+						<h2 class="fragment"><code>class</code> attribute</h2>
+						<h2 class="fragment"><code>ID</code> attribute</h2>
+					</section>
+					
+					<section>
+						<pre><code>&lt;p id="paragraph-1" class="intro">
+</code></pre>
+					</section>
+					
+					<section>
+						<pre><code>p {
+  font-color: #FF0000;
+}
+
+#paragraph-1 {
+  font-color:: #FF0000;
+}
+
+.intro {
+  font-color: #FF0000;
+}
+</code></pre>
+					</section>
+					<section>
+						<pre><code>p {
+  font-color: #FF0000;
+  font-size: 20px;
+}
+
+</code></pre>
+					</section>
+					
+					<section>
+						<h1>CSS Resources</h1>
+					</section>
+					<section>
+						<img src="img/google.png">
+					</section>
+					<section>
+						<h2>CSS Basics</h2>
+						<img src="img/css-basics.png">
+					</section>
+					<section>
+						<h2>CSS Tricks</h2>
+						<img src="img/css-tricks.png">
+					</section>
+					<section>
+						<h2>MDN - CSS Reference</h2>
+						<img src="img/mdn-css.png">
+					</section>
+					<section>
+						<h2>CSS Zen Garden</h2>
+						<img src="img/css-zen-garden.png">
 					</section>
 					
 				</section>
+				
+				<section>
+					<section>
+						<h1>HTML &harr; CSS</h1>
+					</section>
+					<section>
+						<img src="img/p.png">
+						<pre class="fragment"><code class="html" data-trim contenteditable>
+p {
+  font-weight: bold;
+}
+						</code></pre>
+					</section>
+					<section>
+						<img src="img/p-class.png">
+						<pre class="fragment"><code class="html" data-trim contenteditable>
+.intro {
+  font-weight: bold;
+}
+						</code></pre>
+					</section>
+	
+					<section>
+						<img src="img/p-id.png">
+						<pre class="fragment"><code class="html" data-trim contenteditable>
+#intro-1 {
+  font-weight: bold;
+}
+						</code></pre>
+					</section>				
+					
+					<section>
+						<img src="img/p-em.png">
+						<pre class="fragment"><code class="html" data-trim contenteditable>
+p em {
+  font-weight: bold;
+}
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<h1>Foundation</h1>
+				</section>
+				<section>
+					<section>
+						<h1>Dynamic Web</h1>
+						<p class="fragment">Server side programming</p>
+					</section>
+					<section>
+						<h2>Content Management Systems</h2>
+						<blockquote>A computer program that allows publishing, editing and modifying content as well as maintenance from a central interface.</blockquote>
+					</section>
+
+					<section>
+						<img src="img/static-mapping-1.png">
+					</section>
+
+					<section>
+						<img src="img/static-mapping-2.png">
+					</section>
+
+					<section>
+						<img src="img/smashing-pair.png">
+					</section>
+
+					<section>
+						<img src="img/smashing-pair-highlight.png">
+					</section>
+
+					<section>
+						<img src="img/cms-content.png">
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h1>Hosted CMS</h1>
+						<p>Also called Software as a Service (SaaS)</p>
+						<p>e.g. <a href="http://wordpress.com" target="_blank">WordPress.com</a>, <a href="http://squarespace.com" target="_blank">Square Space</a></p>
+						<div style="width: 45%; float: left;">
+							<h3>Advantages</h3>
+							<ul>
+								<li>Little technical knowledge required</li>
+								<li>Well implemented designs</li>
+								<li>Highly optimised code</li>
+							</ul>
+						</div>
+						<div style="width: 45%; float: right;">
+							<h3>Disadvantages</h3>
+							<ul>
+								<li>Inflexible</li>
+								<li>Designs not unique</li>
+								<li>Locked in</li>
+							</ul>
+						</div>
+					</section>
+
+					<section>
+						<h1>Self Hosted &amp; Open Source</h1>
+						<p>e.g. <a href="http://wordpress.org" target="_blank">WordPress.org</a>, <a href="http://www.movabletype.org/" target="_blank">Movable Type</a></p>
+						<div style="width: 45%; float: left;">
+							<h3>Advantages</h3>
+							<ul>
+								<li>Complete control</li>
+								<li>Designs can be unique</li>
+								<li>Flexible functionality</li>
+								<li>Easily extended</li>
+							</ul>
+						</div>
+						<div style="width: 45%; float: right;">
+							<h3>Disadvantages</h3>
+							<ul>
+								<li>Higher degree of technical knowledge required</li>
+								<li>Can be insecure if not updated with new releases</li>
+							</ul>
+						</div>
+					</section>
+
+					<section>
+						<h1>Proprietary &amp; Advanced Open Source Platforms</h1>
+						<p>e.g. <a href="http://silverstripe.org" target="_blank">SilverStripe</a>, <a href="http://www.expressionengine.com/" target="_blank">ExpressionEngine</a>, <a href="http://office.microsoft.com/en-us/sharepoint/" target="_blank">SharePoint</a></p>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h1>WordPress</h1>
+						<h2 class="fragment">Content editing</h2>
+						<h2 class="fragment">Themes</h2>
+						<h2 class="fragment">Plugins</h2>
+						<h2 class="fragment">Theme modification</h2>
+					</section>
+					
+					<section>
+						<h1>WordPress Resources</h1>
+					</section>
+					<section>
+						<img src="img/google.png">
+					</section>
+					<section>
+						<h2>WordPress Codex</h2>
+						<img src="img/wordpress-codex.png">
+					</section>
+					<section>
+						<h2>WordPress Forums</h2>
+						<img src="img/wordpress-forums.png">
+					</section>
+					<section>
+						<h2>WordPress Themes Directory</h2>
+						<img src="img/wordpress-themes.png">
+					</section>
+					<section>
+						<h2>WordPress Plugins Directory</h2>
+						<img src="img/wordpress-plugins.png">
+					</section>
+					<section>
+						<h2>WooThemes</h2>
+						<img src="img/woothemes.png">
+					</section>
+					<section>
+						<h2>Theme Forest</h2>
+						<img src="img/theme-forest.png">
+					</section>
+				</section>
+				
+				<section>
+
+					<section>
+						<h1>Stitching It Together</h1>
+					</section>
+					<section>
+						<p>Hosting</p>
+						<h2 class="fragment">Know your requirements</h2>
+						<h2 class="fragment">Shop around</h2>
+						<h2 class="fragment">Read reviews</h2>
+					</section>
+					<section>
+						<p>HTML Editors</p>
+						<h3 class="fragment">Dreamweaver</h3>
+						<h3 class="fragment">Net Beans</h3>
+						<h3 class="fragment">Coda (by Panic Software)</h3>
+						<h3 class="fragment">Komodo Edit</h3>
+						<h3 class="fragment">TextMate</h3>
+					</section>
+					<section>
+						<p>FTP Programs</p>
+						<h3 class="fragment">Inbuilt IDE FTP</h3>
+						<h3 class="fragment">Cyber Duck (OS X)</h3>
+						<h3 class="fragment">Flow (OS X)</h3>
+						<h3 class="fragment">FileZilla (Windows & OS X)</h3>
+					</section>
+				</section>
+				
+				<section>
+					<h1>codepen.io</h1>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Now you're a designer <em>and</em> a developer.</h3>
+						<h1 class="fragment">What next?</h1>
+					</section>
+					
+					
+					<section>
+						<h1>An Idea!</h1>
+						<figure class="fragment">
+							<blockquote>Content precedes design. Design in the absence of content is not design, it’s decoration.</blockquote>
+							<figcaption><a href="http://www.zeldman.com/2008/05/06/content-precedes-design/">Jeffrey Zeldman</a></figcaption>
+						</figure>
+					</section>
+					
+					<section>
+						<h2>Build it and they will come!</h2>
+					</section>
+					
+					<section>
+						<h2>HTML + CSS <span style="color: green;">✔</span></h2>
+						<h2 class="fragment">HTML + CSS + JS</h2>
+						<h2 class="fragment">That + PHP</h2>
+						<h2 class="fragment">That + Python</h2>
+						<h2 class="fragment">That + Ruby</h2>
+						<h2 class="fragment">That + SASS</h2>
+						<h2 class="fragment">That + ?</h2>
+					</section>
+					
+					<section>
+						<figure>
+							<blockquote>There are just two kinds of languages: the ones everybody complains about and the ones nobody uses.</blockquote>
+							<figcaption>BJARNE STROUSTRUP (DESIGNER OF C++)</figcaption>
+						</figure>
+					</section>
+					
+					<section>
+						<img src="img/google.png">
+					</section>
+					
+					<section>
+						<h2>Code Academy</h2>
+						<img src="img/code-academy.png">
+					</section>
+					<section>
+						<h2>Code Year</h2>
+						<img src="img/code-year.png">
+					</section>
+					<section>
+						<h2>Lynda</h2>
+						<img src="img/lynda.png">
+					</section>
+					<section>
+						<h2>Treehouse</h2>
+						<img src="img/treehouse.png">
+					</section>
+					<section>
+						<h2>GitHub</h2>
+						<img src="img/github.png">
+					</section>
+					<section>
+						<h2>Smashing Magazine</h2>
+						<img src="img/smashing.png">
+					</section>
+					<section>
+						<h2>A List Apart</h2>
+						<img src="img/alistapart.png">
+					</section>
+					<section>
+						<h2>24 Ways</h2>
+						<img src="img/24ways.png">
+					</section>
+					<section>
+						<h2>Meetups</h1>
+						<img src="img/meetup.png">
+					</section>
+					<section>
+						<h3 class="fragment">Web Design Meetup Group</h3>
+						<h3 class="fragment">BrisJS</h3>
+						<h3 class="fragment">User Experience &amp; Interaction Design</h3>
+						<h3 class="fragment">Brisbane Web Tech</h3>
+						<h3 class="fragment">WordPress User Network</h3>
+					</section>
+					<section>
+						<h2>Stack Overflow</h2>
+						<img src="img/stackoverflow.png">
+					</section>
+					
+				</section>
+				
+				<section>
+					<h1>The End</h1>
+					<p>or, hopefully, just the beginning...</p>
+				</section>
+				
 				
 			</div>
 		</div>
